@@ -58,7 +58,7 @@ map.addControl(
   new maplibregl.AttributionControl({
     compact: true,
     customAttribution:
-      '<a href="https://twitter.com/shi__works" target="_blank">X(旧Twitter)</a> | <a href="">GitHub</a>',
+      '<a href="https://twitter.com/shi__works" target="_blank">X(旧Twitter)</a> | <a href="https://github.com/shiwaku/shizuoka-terrain-rgb-on-maplibre">GitHub</a>',
   })
 );
 
@@ -228,8 +228,8 @@ map.on("load", () => {
           14: [1, 20],
           15: [1, 10],
           15: [0.5, 5],
-          16: [0.2, 2],
-          17: [0.2, 1],
+          16: [0.2, 5],
+          17: [0.2, 2],
           18: [0.1, 1],
         },
         // optional override
@@ -268,6 +268,8 @@ map.on("load", () => {
       "text-size": 12,
       "text-field": ["concat", ["number-format", ["get", "ele"], {}], "m"],
       "text-font": ["NotoSansJP-Regular"],
+      "text-allow-overlap": true,
+      "text-ignore-placement": true,
     },
     paint: {
       "text-halo-color": "white",
